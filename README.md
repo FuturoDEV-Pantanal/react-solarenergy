@@ -10,7 +10,7 @@
 React
 
 ### para acesso de dados
-Axios
+Fetch
 
 ### para Rotas
 REACT ROUTER DOM
