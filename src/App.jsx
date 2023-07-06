@@ -1,20 +1,13 @@
-import { useState, useEffect } from 'react';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Unidades from "./pages/unidades/Unidades";
 
+export default function App() {
+ return (
+   <BrowserRouter>
+     <Routes>
+      <Route path="/" element={<Unidades />} />
 
-function App() {
-  const [unidades, setUnidades] = useState([])
-
-  useEffect(()=>{
-    fetch("http://localhost:3003/unidades")
-      .then((resposta)=>{return resposta.json()})
-      .then((conteudo)=>{setUnidades(conteudo)})
-  },[])
-    console.log(unidades)
-  return (
-    <>
-      Esta funcionando
-    </>
-  )
+      </Routes>
+   </BrowserRouter>
+ )
 }
-
-export default App
