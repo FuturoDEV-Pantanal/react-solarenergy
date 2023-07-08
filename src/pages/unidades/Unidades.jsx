@@ -1,20 +1,21 @@
-import { useState, useEffect } from 'react';
-
+import { useState } from "react";
+import ListaDeUnidade from "../../components/ListaDeUnidade/ListaDeUnidade";
+import CadastroDeUnidade from "../../components/CadastroDeUnidade/CadastroDeUnidade";
 
 function Unidades() {
-  const [unidades, setUnidades] = useState([])
+    const [apareceLista, setApareceLista] = useState(true);
 
-  useEffect(()=>{
-    fetch("http://localhost:3003/unidades")
-      .then((resposta)=>{return resposta.json()})
-      .then((conteudo)=>{setUnidades(conteudo)})
-  },[])
-    console.log(unidades)
-  return (
-    <>
-      Esta funcionando
-    </>
-  )
-}
+    return (
+      <>
+        {apareceLista === true && (
+          <ListaDeUnidade setApareceLista={setApareceLista} />
+        )}
 
-export default Unidades
+        {apareceLista === false && (
+          <CadastroDeUnidade setApareceLista={setApareceLista} />
+        )}
+      </>
+    );
+  }
+
+export default Unidades;
