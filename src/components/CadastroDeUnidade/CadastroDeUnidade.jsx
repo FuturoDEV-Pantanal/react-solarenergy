@@ -10,7 +10,6 @@ export default function CadastroDeUnidade({ setApareceLista }) {
     ativo: false
   };
   const [unidade, setUnidade] = useState(unidadeVazia);
-  console.log({ unidade });
 
   const cadastrarUnidade = (evento) => {
     evento.preventDefault();
