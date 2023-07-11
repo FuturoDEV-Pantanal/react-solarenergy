@@ -11,7 +11,6 @@ export default function ListaDeUnidade({setApareceLista}) {
         setUnidades(conteudo);
       });
   }, []);
-  console.log(unidades);
 
   return (
     <div>
