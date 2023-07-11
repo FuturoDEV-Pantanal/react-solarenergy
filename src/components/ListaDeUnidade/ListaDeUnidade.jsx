@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-export default function ListaDeUnidade() {
+export default function ListaDeUnidade({setApareceLista}) {
   const [unidades, setUnidades] = useState([]);
 
   useEffect(() => {
@@ -21,6 +21,7 @@ export default function ListaDeUnidade() {
           return <li key={unidade.id}>{unidade.apelido}</li>;
         })}
       </ul>
+      <button onClick={()=>setApareceLista(false)}>Cadastrar Unidade</button>
     </div>
   );
 }
