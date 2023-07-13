@@ -3,8 +3,8 @@
 //Dica: escreva testes para os valores 30, 350 e 3725
 
 function formatarTempo(segundos) {
-    const horas = Math.floor(segundos / 3600);
-    const minutos = Math.floor((segundos % 3600) / 60);
+    const horas = Math.floor(segundos/(60*60));
+    const minutos = Math.trunc(segundos / 60) % 60;
     const segRestantes = segundos % 60;
   
     return `${horas}h ${minutos}m ${segRestantes}s`;
