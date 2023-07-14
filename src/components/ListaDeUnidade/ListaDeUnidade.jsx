@@ -14,7 +14,7 @@ export default function ListaDeUnidade({setApareceLista}) {
 
   return (
     <div>
-      Lista de Unidades
+      <h1>Lista de Unidades</h1>
       <ul>
         {unidades.map((unidade) => {
           return <li key={unidade.id}>{unidade.apelido}</li>;
